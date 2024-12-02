@@ -18,7 +18,7 @@ const app = express();
 app.use(bodyParser.json()); //💡 HTTP is a text-based protocol
 app.use(
   cors({
-    origin: 'https://mern-geojsone.netlify.app/',
+    origin: 'https://mern-geojsone.netlify.app',
     methods: 'GET,POST,PUT,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Authorization',
     credentials: true,
