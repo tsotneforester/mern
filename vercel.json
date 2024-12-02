@@ -12,7 +12,7 @@
       "dest": "server.js",
       "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       "headers": {
-        "Access-Control-Allow-Origin": "https://bejewelled-torrone-50e493.netlify.app",
+        "Access-Control-Allow-Origin": "https://mern-geojsone.netlify.app",
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "Content-Type, Authorization"
       }
