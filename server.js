@@ -2,6 +2,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 //🔰 connect to MongoDB
 mongoose
   .connect(`mongodb+srv://tsotneforester:cZLHqT8Lgo2OOH3D@cluster0.5iuh8.mongodb.net/test`)
@@ -15,6 +16,15 @@ const app = express();
 
 //🔰 Middleware
 app.use(bodyParser.json()); //💡 HTTP is a text-based protocol
+
+app.use(
+  cors({
+    origin: 'https://bejewelled-torrone-50e493.netlify.app/',
+    methods: 'GET,POST,PUT,DELETE,OPTIONS',
+    allowedHeaders: 'Content-Type, Authorization',
+    credentials: true, // Allow credentials if needed
+  })
+);
 
 //🔰 Define a Post schema
 const postSchema = new mongoose.Schema({
