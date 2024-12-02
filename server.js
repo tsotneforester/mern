@@ -16,7 +16,14 @@ const app = express();
 
 //🔰 Middleware
 app.use(bodyParser.json()); //💡 HTTP is a text-based protocol
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://mern-geojsone.netlify.app/',
+    methods: 'GET,POST,PUT,DELETE,OPTIONS',
+    allowedHeaders: 'Content-Type, Authorization',
+    credentials: true,
+  })
+);
 
 //🔰 Define a Post schema
 const postSchema = new mongoose.Schema({
